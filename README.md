@@ -14,7 +14,7 @@
 ## 安装
 
 ```bash
-git clone https://github.com/<your-account>/douyin-business-review.git ~/.codex/skills/douyin-business-review
+git clone https://github.com/bigjun1-art/douyin-business-review.git ~/.codex/skills/douyin-business-review
 ```
 
 也可以下载仓库后，将整个目录复制到 `~/.codex/skills/douyin-business-review`。
