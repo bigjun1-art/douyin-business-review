@@ -1,0 +1,4 @@
+interface:
+  display_name: "抖音生意经自然月复盘"
+  short_description: "核验抖音生意经自然月经营数据并生成专业飞书复盘文档"
+  default_prompt: "Use $douyin-business-review to audit the current Douyin Business Analytics account for a natural-month review and create a verified Feishu report."
