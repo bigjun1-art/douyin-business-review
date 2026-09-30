@@ -1,0 +1,223 @@
+{
+  "schema_version": 2,
+  "company": "示例烘焙有限公司",
+  "period": {
+    "start": "2025-08-01",
+    "end": "2025-08-31"
+  },
+  "captured_at": "2025-09-01T10:00:00+08:00",
+  "capture": {
+    "method": "platform_export",
+    "foreground_used": false,
+    "identity_verified": true,
+    "identity_evidence": "虚构测试导出标题：示例烘焙有限公司。非真实经营数据。"
+  },
+  "metrics": [
+    {
+      "metric": "gmv",
+      "value": 10000,
+      "raw_value": "10,000.00元",
+      "period_start": "2025-08-01",
+      "period_end": "2025-08-31",
+      "scope": "全部门店",
+      "source_module": "经营总览",
+      "source_label": "成交金额",
+      "source_ref": "synthetic://example-2025-08/gmv"
+    },
+    {
+      "metric": "redemption",
+      "value": 4000,
+      "raw_value": "4,000.00元",
+      "period_start": "2025-08-01",
+      "period_end": "2025-08-31",
+      "scope": "全部门店",
+      "source_module": "经营总览",
+      "source_label": "核销金额",
+      "source_ref": "synthetic://example-2025-08/redemption"
+    },
+    {
+      "metric": "refund",
+      "value": 1500,
+      "raw_value": "1,500.00元",
+      "period_start": "2025-08-01",
+      "period_end": "2025-08-31",
+      "scope": "全部门店",
+      "source_module": "经营总览",
+      "source_label": "退款金额",
+      "source_ref": "synthetic://example-2025-08/refund"
+    },
+    {
+      "metric": "live_session_count",
+      "value": 10,
+      "raw_value": "10场",
+      "period_start": "2025-08-01",
+      "period_end": "2025-08-31",
+      "scope": "全部账号；全部门店",
+      "source_module": "直播分析",
+      "source_label": "直播场次",
+      "source_ref": "synthetic://example-2025-08/live_session_count"
+    },
+    {
+      "metric": "live_duration_seconds",
+      "value": 36000,
+      "raw_value": "10小时",
+      "period_start": "2025-08-01",
+      "period_end": "2025-08-31",
+      "scope": "全部账号；全部门店",
+      "source_module": "直播分析",
+      "source_label": "直播时长",
+      "source_ref": "synthetic://example-2025-08/live_duration_seconds"
+    },
+    {
+      "metric": "live_viewers",
+      "value": 1000,
+      "raw_value": "1,000人",
+      "period_start": "2025-08-01",
+      "period_end": "2025-08-31",
+      "scope": "全部账号；全部门店",
+      "source_module": "直播分析",
+      "source_label": "直播间观看人数",
+      "source_ref": "synthetic://example-2025-08/live_viewers"
+    },
+    {
+      "metric": "live_gmv",
+      "value": 6000,
+      "raw_value": "6,000.00元",
+      "period_start": "2025-08-01",
+      "period_end": "2025-08-31",
+      "scope": "全部账号；全部门店",
+      "source_module": "直播分析",
+      "source_label": "直播间成交金额",
+      "source_ref": "synthetic://example-2025-08/live_gmv"
+    },
+    {
+      "metric": "live_coupon_count",
+      "value": 100,
+      "raw_value": "100张",
+      "period_start": "2025-08-01",
+      "period_end": "2025-08-31",
+      "scope": "全部账号；全部门店",
+      "source_module": "直播分析",
+      "source_label": "直播间成交券数",
+      "source_ref": "synthetic://example-2025-08/live_coupon_count"
+    },
+    {
+      "metric": "video_count_total",
+      "value": 20,
+      "raw_value": "20条",
+      "period_start": "2025-08-01",
+      "period_end": "2025-08-31",
+      "scope": "全部身份；全部锚点",
+      "source_module": "视频分析",
+      "source_label": "新增视频数",
+      "source_ref": "synthetic://example-2025-08/video_count_total"
+    },
+    {
+      "metric": "influencer_video_count",
+      "value": 5,
+      "raw_value": "5条",
+      "period_start": "2025-08-01",
+      "period_end": "2025-08-31",
+      "scope": "全部身份；全部锚点",
+      "source_module": "视频分析",
+      "source_label": "达人新增视频数",
+      "source_ref": "synthetic://example-2025-08/influencer_video_count"
+    },
+    {
+      "metric": "video_play_count",
+      "value": 10000,
+      "raw_value": "10,000次",
+      "period_start": "2025-08-01",
+      "period_end": "2025-08-31",
+      "scope": "全部身份；全部锚点",
+      "source_module": "视频分析",
+      "source_label": "视频播放量",
+      "source_ref": "synthetic://example-2025-08/video_play_count"
+    },
+    {
+      "metric": "video_direct_gmv",
+      "value": 1000,
+      "raw_value": "1,000.00元",
+      "period_start": "2025-08-01",
+      "period_end": "2025-08-31",
+      "scope": "全部身份；全部锚点",
+      "source_module": "视频分析",
+      "source_label": "视频直接成交金额",
+      "source_ref": "synthetic://example-2025-08/video_direct_gmv"
+    }
+  ],
+  "live_accounts": {
+    "complete": true,
+    "rows": [
+      {
+        "id": "sample-official-001",
+        "name": "示例官方号",
+        "live_duration_seconds": 28800,
+        "live_gmv": 4500,
+        "live_coupon_count": 75,
+        "live_session_count": 8,
+        "period_start": "2025-08-01",
+        "period_end": "2025-08-31",
+        "scope": "全部账号；全部门店"
+      },
+      {
+        "id": "sample-staff-002",
+        "name": "示例店员号",
+        "live_duration_seconds": 7200,
+        "live_gmv": 1500,
+        "live_coupon_count": 25,
+        "live_session_count": 2,
+        "period_start": "2025-08-01",
+        "period_end": "2025-08-31",
+        "scope": "全部账号；全部门店"
+      }
+    ]
+  },
+  "video_groups": {
+    "complete": true,
+    "mutually_exclusive": true,
+    "rows": [
+      {
+        "name": "商家",
+        "identity_type": "merchant",
+        "new_video_count": 12,
+        "video_play_count": 2500,
+        "video_direct_gmv": 600,
+        "period_start": "2025-08-01",
+        "period_end": "2025-08-31",
+        "scope": "全部身份；全部锚点"
+      },
+      {
+        "name": "达人",
+        "identity_type": "influencer",
+        "new_video_count": 5,
+        "video_play_count": 6000,
+        "video_direct_gmv": 300,
+        "period_start": "2025-08-01",
+        "period_end": "2025-08-31",
+        "scope": "全部身份；全部锚点"
+      },
+      {
+        "name": "店员/职人",
+        "identity_type": "staff",
+        "new_video_count": 1,
+        "video_play_count": 1000,
+        "video_direct_gmv": 100,
+        "period_start": "2025-08-01",
+        "period_end": "2025-08-31",
+        "scope": "全部身份；全部锚点"
+      },
+      {
+        "name": "UGC",
+        "identity_type": "ugc",
+        "new_video_count": 2,
+        "video_play_count": 500,
+        "video_direct_gmv": 0,
+        "period_start": "2025-08-01",
+        "period_end": "2025-08-31",
+        "scope": "全部身份；全部锚点"
+      }
+    ]
+  },
+  "influencer_in_total": true
+}

@@ -1,5 +1,12 @@
 .DS_Store
 __pycache__/
 *.pyc
-review-data.json
+.env
+.env.*
 *.local.json
+*.log
+review-data.json
+delivery-state*.json
+runs/
+output/
+.local/

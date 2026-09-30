@@ -1,0 +1,35 @@
+{
+  "schema_version": 2,
+  "company": "示例烘焙有限公司",
+  "period": {
+    "start": "2025-08-01",
+    "end": "2025-08-31"
+  },
+  "execution": {
+    "mode": "background_only",
+    "allow_foreground": false
+  },
+  "source": {
+    "platform": "douyin_life_business",
+    "browser_profile": "示例商家资料"
+  },
+  "delivery": {
+    "profile": "personal-example",
+    "identity": "user",
+    "folder_token": "example-folder-not-live"
+  },
+  "required_metrics": [
+    "gmv",
+    "redemption",
+    "refund",
+    "live_session_count",
+    "live_duration_seconds",
+    "live_viewers",
+    "live_gmv",
+    "live_coupon_count",
+    "video_count_total",
+    "influencer_video_count",
+    "video_play_count",
+    "video_direct_gmv"
+  ]
+}
