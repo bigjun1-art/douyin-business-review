@@ -878,6 +878,14 @@ def publish_review(
     document_id: str | None = None,
     runner: LarkRunner | None = None,
 ) -> dict[str, Any]:
+    delivery = config.get("delivery")
+    if isinstance(delivery, dict) and (
+        delivery.get("document_id") or delivery.get("mode", "create") != "create"
+    ):
+        raise PipelineError(
+            "BLOCKED_UPDATE_REQUIRES_BOUNDED_EDIT",
+            "publish only creates or verifies recovered creations; use bounded editing for an existing-document target",
+        )
     checked = validate_review(config, data)
     if checked["failures"]:
         raise PipelineError("CHECK_FAILED", "publish requires evidence with no validation failures")

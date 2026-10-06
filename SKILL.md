@@ -2,12 +2,14 @@
 name: douyin-business-review
 description: Create verified Douyin Life Services Business Analytics (生意经) operating reviews using parameterized background-only evidence checks, calculations and Feishu delivery. Use for monthly or specified-date business reviews from an authorized non-focusing connector or platform exports. Never take over the user's desktop or browser; not for influencer selection or public-profile research.
 metadata:
-  version: "2.0.0"
+  version: "2.1.0"
 ---
 
 # 抖音生意经经营复盘 · 纯后台
 
 把授权经营数据转成有证据、可复算、可执行的复盘。企业、日期、浏览器资料、指标和飞书目标均使用任务参数；不携带任何客户的账号、经营数字或登录资料。
+
+**无需本机任务端口。** 使用短时命令行进程与私人任务目录接续工作，不启动 HTTP 服务、浏览器调试端口或常驻守护进程。任务由当前宿主编排，宿主退出不保证继续运行。统一入口是 `scripts/review_job.py`，不是新增采集接口。
 
 ## 不打扰用户是执行边界
 
@@ -21,7 +23,7 @@ metadata:
 2. 先读 [后台采集](references/background-capture.md)，核对实际能力。后台连接或平台导出均应保存最小证据；没有生意经私有接口时不猜测端点、不提取凭据。脚本接受规范化证据，不假装自行完成登录和全量采集。
 3. 读 [数据契约](references/data-audit.md)，创建任务独占目录，在 Skill 目录之外存放配置、原始证据、分析包及报告。用 `init` 生成参数；用 `check` 验证主体、周期、完整性和跨表加总；用 `analyze` 计算。命令见 [后台脚本](references/background-runbook.md)。
 4. 读 [报告框架](references/report-framework.md)，结合原始证据与分析包写完整报告。脚本负责确定性校验，不替代经营判断。若交付飞书，使用可用的 `lark-doc` 创作工作流初始化独立草稿、选择体裁并完成语义审阅；使用 `lark-drive` 确认真实目标文件夹。缺少这些技能时使用 `lark-cli` 自身帮助及已知格式，不虚构命令。
-5. `publish` 是本流程唯一新建文档入口：串行调用飞书CLI，校验身份、检查草稿、创建、持久化文档ID、回读正文并核实父目录。不要同时另行运行 `docs +create`。重跑复用同一状态文件，未知写入结果不得再次创建。
+5. 优先用 `review_job.py run --job <私人目录>` 接续检查、分析与发布前准备。通读报告并完成语义审阅后，由执行智能体运行 `reviewed` 记录输入指纹，不额外要求用户逐项确认；它只记录审阅声明，不代替审阅。配置、证据或正文变化后重新审阅。明确的新建授权下加 `--publish`，内部复用 `review_pipeline.py publish`，不要另行创建同一文档。指定已有文档时改走 [原位修订](references/background-runbook.md#已有文档原位修订)，不得把目标当作新建任务。
 6. 交付实际文档链接、统计截止日及影响结论的未确认项。没有读取完整月末数据就不声称完整自然月完成；没有验证后台采集器就不声称全流程无人值守采集已跑通。
 
 ## 数据与分析硬边界
